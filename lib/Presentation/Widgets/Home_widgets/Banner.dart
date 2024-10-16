@@ -34,9 +34,7 @@ class Banner_Widget extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      
                     ),
-                    
                   ),
                 ),
                 const Text(

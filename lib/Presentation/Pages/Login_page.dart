@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: Splash_Page(),
+            link_page: "/Splas",
             font_size: 20,
             padding_value: 10)
       ],
@@ -166,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: Splash_Page(),
+            link_page: "/Splas",
             font_size: 20,
             padding_value: 10)
       ],

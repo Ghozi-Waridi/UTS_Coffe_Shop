@@ -7,19 +7,6 @@ import '../Widgets/global_Component/App_Bar.dart';
 import '../Colors.dart' as cl;
 
 class Detail_Item_page extends StatefulWidget {
-  final String? image_url;
-  final String? description;
-  final double? price;
-  final String? name;
-  final double? rating;
-
-  const Detail_Item_page({super.key, 
-    required this.image_url,
-    required this.price,
-    required this.description,
-    required this.name,
-    required this.rating,
-  });
 
   @override
   State<Detail_Item_page> createState() => _Detail_Item_pageState();
@@ -28,6 +15,9 @@ class Detail_Item_page extends StatefulWidget {
 class _Detail_Item_pageState extends State<Detail_Item_page> {
   @override
   Widget build(BuildContext context) {
+
+        final Map arguments = ModalRoute.of(context)!.settings.arguments as Map;
+
     return Scaffold(
       bottomSheet: BottomAppBar(
           height: 130,
@@ -43,7 +33,7 @@ class _Detail_Item_pageState extends State<Detail_Item_page> {
                     style: TextStyle(fontSize: 20),
                   ),
                   Text(
-                    "${widget.price}",
+                    "${arguments["price"]}",
                     style: TextStyle(
                         fontSize: 25,
                         color: cl.icons_color,
@@ -57,7 +47,7 @@ class _Detail_Item_pageState extends State<Detail_Item_page> {
                   border_radius: 15,
                   width: 200,
                   font_size: 25,
-                  link_page: Container(), // ordertidak ada
+                  link_page: "/Home", // ordertidak ada
                   padding_value: 10),
             ],
           )),
@@ -77,19 +67,19 @@ class _Detail_Item_pageState extends State<Detail_Item_page> {
                 CrossAxisAlignment.start, // Menyelaraskan ke kiri
             children: [
               Container(
-                child: Image.network(widget.image_url ?? ""),
+                child: Image.network(arguments["image"] ?? ""),
               ),
               const SizedBox(height: 20),
               Judul_Rating(
-                description: widget.description ?? "",
-                name_Product: widget.name ?? "",
+                description: arguments["description"] ?? "",
+                name_Product: arguments["name"] ?? "",
                 rating:
-                    widget.rating ?? 0.0, // Menggunakan rating dari parameter
-                price: widget.price ?? 0.0,
+                    arguments["rating"] ?? 0.0, // Menggunakan rating dari parameter
+                price: arguments["price"] ?? 0.0,
                 sale_amount: 2000,
               ),
               Descriptio_Size(
-                description: widget.description ?? "",
+                description: arguments["description"] ?? "",
               ),
               SizedBox(
                 height: 130,

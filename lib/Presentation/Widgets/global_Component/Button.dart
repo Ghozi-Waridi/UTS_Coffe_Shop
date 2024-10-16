@@ -6,7 +6,7 @@ class Button_Widget extends StatelessWidget {
   final String text;
   final Color color_button;
   final double border_radius;
-  final Widget link_page;
+  final String link_page;
   final double font_size;
   final double padding_value;
 
@@ -24,18 +24,7 @@ class Button_Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // if(link_page == "/Home"){
-        //   Get.offNamed("/Home");
-        // } else {
-        //   Get.offNamed(link_page!);
-        // }
-
-        // Get.offNamed(link_page!);
-
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => link_page),
-        );
+        Navigator.pushNamed(context, link_page);
       },
       child: Container(
         padding: EdgeInsets.all(padding_value),

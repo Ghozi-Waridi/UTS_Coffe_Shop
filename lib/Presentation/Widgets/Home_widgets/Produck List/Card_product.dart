@@ -9,7 +9,8 @@ class Card_Product extends StatelessWidget {
   final double? price;
   final String description;
 
-  const Card_Product({super.key, 
+  const Card_Product({
+    super.key,
     required this.name_product,
     required this.category,
     required this.link_gambar,
@@ -22,18 +23,20 @@ class Card_Product extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Get.toNamed("/Detail", arguments: {
-        //   'image_url': link_gambar,
-        //   'name': name_product,
-        //   'price': price,
-        //   'rating': rating_product,
-        //   'description': description,
-        // });
+        Navigator.pushNamed(
+          context, "/Detail", arguments: {
+          'image_url': link_gambar,
+          'name': name_product,
+          'price': price,
+          'rating': rating_product,
+          'description': description,
+        });
       },
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
-            color: const Color(0xFFEDEDED), borderRadius: BorderRadius.circular(20)),
+            color: const Color(0xFFEDEDED),
+            borderRadius: BorderRadius.circular(20)),
         child: Column(
           children: [
             Image.network(
@@ -46,7 +49,8 @@ class Card_Product extends StatelessWidget {
               child: Text(
                 /*name_product ?? ""*/
                 name_product,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
               ),
             ),
             const SizedBox(

@@ -35,7 +35,7 @@ class Sale_Component extends StatelessWidget {
           color_button: cl.icons_color,
           border_radius: 20,
           width: 250,
-          link_page: Home_Page(),
+          link_page: "/Home",
           font_size: 20,
           padding_value: 20,
         ),

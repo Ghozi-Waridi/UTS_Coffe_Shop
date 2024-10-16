@@ -50,7 +50,7 @@ class splash_text extends StatelessWidget {
             color_button: Color_custom.icons_color,
             border_radius: 20,
             width: 400,
-            link_page: Home_Page(),
+            link_page: "/Home",
             font_size: 20,
             padding_value: 20,
           ),
