@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_coffe/Presentation/Pages/Splash._page.dart';
 import 'package:shop_coffe/Presentation/Widgets/global_Component/Button.dart';
 import '../Colors.dart' as cl;
 import 'package:flutter_svg/flutter_svg.dart';
@@ -108,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: "/splash",
+            link_page: Splash_Page(),
             font_size: 20,
             padding_value: 10)
       ],
@@ -165,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
             color_button: Colors.black,
             border_radius: 10,
             width: width,
-            link_page: "/splash",
+            link_page: Splash_Page(),
             font_size: 20,
             padding_value: 10)
       ],

@@ -57,7 +57,7 @@ class _Detail_Item_pageState extends State<Detail_Item_page> {
                   border_radius: 15,
                   width: 200,
                   font_size: 25,
-                  link_page: "/Order",
+                  link_page: Container(), // ordertidak ada
                   padding_value: 10),
             ],
           )),

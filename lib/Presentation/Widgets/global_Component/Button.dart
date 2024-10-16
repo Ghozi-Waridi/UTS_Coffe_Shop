@@ -6,7 +6,7 @@ class Button_Widget extends StatelessWidget {
   final String text;
   final Color color_button;
   final double border_radius;
-  final String? link_page;
+  final Widget link_page;
   final double font_size;
   final double padding_value;
 
@@ -31,6 +31,11 @@ class Button_Widget extends StatelessWidget {
         // }
 
         // Get.offNamed(link_page!);
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => link_page),
+        );
       },
       child: Container(
         padding: EdgeInsets.all(padding_value),

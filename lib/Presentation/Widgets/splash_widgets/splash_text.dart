@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_coffe/Presentation/Pages/Home_page.dart';
 import 'package:shop_coffe/Presentation/Widgets/global_Component/Button.dart';
 import '../../Colors.dart' as Color_custom;
 
@@ -49,7 +50,7 @@ class splash_text extends StatelessWidget {
             color_button: Color_custom.icons_color,
             border_radius: 20,
             width: 400,
-            link_page: "/Home",
+            link_page: Home_Page(),
             font_size: 20,
             padding_value: 20,
           ),

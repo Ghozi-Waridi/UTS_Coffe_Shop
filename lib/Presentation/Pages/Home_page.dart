@@ -26,11 +26,7 @@ class _Home_PageState extends State<Home_Page> {
       length: 5,
       child: Scaffold(
         // backgroundColor: cl.bg_Color,
-        body: isLoading
-            ? const Center(
-                child: CircularProgressIndicator(),
-              )
-            : SingleChildScrollView(
+        body: SingleChildScrollView(
                 child: Column(
                   children: [
                     Container(
