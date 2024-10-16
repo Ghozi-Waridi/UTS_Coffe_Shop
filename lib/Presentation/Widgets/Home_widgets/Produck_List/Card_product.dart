@@ -39,7 +39,7 @@ class Card_Product extends StatelessWidget {
             borderRadius: BorderRadius.circular(20)),
         child: Column(
           children: [
-            Image.network(
+            Image.asset(
               /*link_gambar ?? ""*/
               link_gambar,
               height: 130,
@@ -56,10 +56,7 @@ class Card_Product extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            // Container(alignment: Alignment.topLeft, child: Text(/*category ?? ""*/ category)),
-            // SizedBox(
-            //   height: ,
-            // ),
+
             Row(
               children: [
                 Text(

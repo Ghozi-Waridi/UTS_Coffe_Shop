@@ -67,7 +67,7 @@ class _Detail_Item_pageState extends State<Detail_Item_page> {
                 CrossAxisAlignment.start, // Menyelaraskan ke kiri
             children: [
               Container(
-                child: Image.network(arguments["image"] ?? ""),
+                child: Image.asset(arguments["link_gambar"] ?? ""),
               ),
               const SizedBox(height: 20),
               Judul_Rating(

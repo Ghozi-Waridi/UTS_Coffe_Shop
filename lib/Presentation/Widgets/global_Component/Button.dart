@@ -24,6 +24,7 @@ class Button_Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        print(link_page);
         Navigator.pushNamed(context, link_page);
       },
       child: Container(
